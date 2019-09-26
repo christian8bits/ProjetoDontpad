@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ProjetoDontpad</string>
+    <string name="buttonFotos">Photos</string>
+    <string name="textViewText">Pagina de texto</string>
+    <string name="buttonTexto">Text</string>
+    <string name="textViewPhotos">Photos diversas</string>
+</resources>
