@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity"
     android:padding="20dp">
 
@@ -12,53 +13,82 @@
     <FrameLayout
         android:id="@+id/frameText"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_weight="3">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/textViewText"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_gravity="center_horizontal">
         </TextView>
     </FrameLayout>
-
-
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/frameFotos"
-        android:visibility="gone">
-
-
+        android:layout_weight="3"
+        android:visibility="gone"
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/textViewPhotos">
+            android:text="@string/textViewPhotos"
+            android:layout_gravity="center_horizontal">
 
         </TextView>
 
+        <GridLayout
+            android:id="@+id/gridFotos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                app:srcCompat="@drawable/foto1">
+
+
+            </ImageView>
+
+        </GridLayout>
+
     </FrameLayout>
 
-
-    <Button
-        android:id="@+id/buttonTexto"
+    <GridLayout
+        android:id="@+id/LinearLayoutButtons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/buttonTexto"
-        android:onClick="irParaTexto">
-    </Button>
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:layout_weight="1">
 
-    <Button
-        android:id="@+id/buttonFotos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonFotos"
-        android:onClick="irParaFotos">
 
-    </Button>
+        <Button
+            android:id="@+id/buttonTexto"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:text="@string/buttonTexto"
+            android:onClick="irParaTexto"
+
+            >
+
+        </Button>
+
+        <Button
+
+            android:id="@+id/buttonFotos"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:text="@string/buttonFotos"
+            android:onClick="irParaFotos">
+
+        </Button>
+
+
+
+    </GridLayout>
+
+
 
 
 
