@@ -4,4 +4,6 @@
     <string name="textViewText">Pagina de texto</string>
     <string name="buttonTexto">Text</string>
     <string name="textViewPhotos">Photos diversas</string>
+    <string name="fotoImageView">Foto</string>
+    <string name="imageViewCheia">imageFull</string>
 </resources>

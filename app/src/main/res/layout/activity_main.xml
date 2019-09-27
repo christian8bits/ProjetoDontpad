@@ -10,86 +10,109 @@
     android:padding="20dp">
 
 
+
+    <TextView
+        android:id="@+id/textViewTAG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textViewPhotos"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal">
+    </TextView>
+
+    <FrameLayout
+        android:id="@+id/frameVerImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/imageViewFull"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/imageViewCheia">
+
+        </ImageView>
+    </FrameLayout>
+
     <FrameLayout
         android:id="@+id/frameText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="3">
+        android:layout_weight="3"
+        android:visibility="gone">
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/textViewTexto"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/textViewText"
+            android:textAlignment="center"
             android:layout_gravity="center_horizontal">
         </TextView>
+
     </FrameLayout>
+
+
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/frameFotos"
-        android:layout_weight="3"
-        android:visibility="gone"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/textViewPhotos"
-            android:layout_gravity="center_horizontal">
-
-        </TextView>
+        android:layout_weight="3">
 
         <GridLayout
-            android:id="@+id/gridFotos"
+            android:id="@+id/gridFotosMini"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
 
             <ImageView
                 android:id="@+id/imageView1"
-                app:srcCompat="@drawable/foto1">
+                android:layout_width="100dp"
+                android:layout_height="200dp"
+                android:contentDescription="@string/fotoImageView"
+                android:visibility="visible"
+                app:srcCompat="@mipmap/foto1_foreground"
+                android:onClick="irVerFoto">
+            </ImageView>
 
-
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="100dp"
+                android:layout_height="200dp"
+                android:contentDescription="@string/fotoImageView"
+                android:visibility="visible"
+                app:srcCompat="@mipmap/foto2_foreground"
+                android:onClick="irVerFoto2">
             </ImageView>
 
         </GridLayout>
 
     </FrameLayout>
 
-    <GridLayout
-        android:id="@+id/LinearLayoutButtons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="end"
-        android:layout_weight="1">
 
+    <GridLayout
+        android:id="@+id/gridLayoutButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
 
         <Button
             android:id="@+id/buttonTexto"
             android:layout_width="150dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="@string/buttonTexto"
-            android:onClick="irParaTexto"
-
-            >
-
+            android:onClick="irParaTexto">
         </Button>
 
         <Button
-
             android:id="@+id/buttonFotos"
             android:layout_width="150dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="@string/buttonFotos"
             android:onClick="irParaFotos">
-
         </Button>
-
-
-
     </GridLayout>
-
-
-
 
 
 </LinearLayout>
